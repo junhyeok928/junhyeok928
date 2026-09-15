@@ -15,8 +15,8 @@ React로 사용자 화면과 운영자를 위한 관리 도구를 만듭니다.
 
 <br />
 
-<a href="https://github.com/junhyeok928/snapthetitle-app"><img src="https://img.shields.io/badge/VIEW_PROJECT-SnapTheTitle-20383D?style=for-the-badge" alt="대표 프로젝트 SnapTheTitle" /></a>
-<a href="https://snapthetitle.com"><img src="https://img.shields.io/badge/VISIT-Website-E8E4DA?style=for-the-badge" alt="SnapTheTitle 웹사이트" /></a>
+<a href="#portfolio"><img src="https://img.shields.io/badge/EXPLORE-Portfolio-20383D?style=for-the-badge" alt="포트폴리오 보기" /></a>
+<a href="#tech-stack"><img src="https://img.shields.io/badge/EXPLORE-Tech_Stack-E8E4DA?style=for-the-badge" alt="기술 스택 보기" /></a>
 
 <br /><br />
 
@@ -28,20 +28,21 @@ React로 사용자 화면과 운영자를 위한 관리 도구를 만듭니다.
 
 ## 01 / About
 
-웨딩 스냅 브랜드 **SnapTheTitle**의 홈페이지와 관리자 시스템을 구현했습니다.<br />
-촬영 사진을 탐색하는 공개 화면부터 콘텐츠 관리, 관리자 인증, 이미지 처리, 배포 구성까지 하나의 프로젝트로 연결했습니다.
+사용자 화면과 서버 로직, 데이터 저장과 배포 환경을 연결하는 웹 개발을 합니다.<br />
+프로젝트별로 해결한 문제와 구현 과정, 사용한 기술을 정리하고 있습니다.
 
-| 사용자 경험 | 서비스 로직 | 운영 환경 |
+| Frontend | Backend | Infrastructure |
 | :--- | :--- | :--- |
-| 사진 탐색과 확대 보기 | JWT 관리자 인증 | Docker Compose 서비스 구성 |
-| 반응형 사용자·관리자 UI | 콘텐츠 CRUD와 데이터 모델 | Nginx HTTPS·API 프록시 |
-| 드래그 앤 드롭 사진 정렬 | WebP 변환과 썸네일 생성 | 업로드 파일 제공·정적 캐시 |
+| React 기반 화면과 상태 관리 | Java · Spring Boot 기반 API | Docker 기반 서비스 구성 |
+| 사용자 흐름과 관리 UI 구현 | 인증·권한과 데이터 모델링 | Nginx 프록시와 정적 파일 제공 |
 
 <br />
 
+<a id="tech-stack"></a>
+
 ## 02 / Tech Stack
 
-**프로젝트에서 실제 사용한 기술입니다.**
+**주요 사용 기술** · 각 프로젝트에 적용한 기술과 구현 내용은 아래 포트폴리오에서 확인할 수 있습니다.
 
 ### Backend
 
@@ -79,15 +80,31 @@ HTTPS · Let's Encrypt / Certbot · 정적 파일 캐시 · 공유 업로드 볼
 
 <br />
 
-## 03 / Featured Project
+<a id="portfolio"></a>
+
+## 03 / Portfolio
+
+프로젝트별 서비스 소개, 개발 범위와 핵심 구현을 모았습니다.
+
+| 프로젝트 | 소개 | 개발 범위 |
+| :--- | :--- | :--- |
+| [**01 · SnapTheTitle**](#project-snapthetitle) | 웨딩 스냅 홈페이지 & 콘텐츠 관리 시스템 | Frontend · Backend · Infrastructure |
+
+<br />
+
+<!-- PROJECT START: snapthetitle -->
+<a id="project-snapthetitle"></a>
+
+### Project 01 / SnapTheTitle
+
 
 <a href="https://github.com/junhyeok928/snapthetitle-app">
 <img src="https://raw.githubusercontent.com/junhyeok928/snapthetitle-app/main/docs/assets/readme-cover.svg" width="100%" alt="SnapTheTitle — Photography meets engineering" />
 </a>
 
-### SnapTheTitle
-
 **웨딩 스냅 홈페이지 & 콘텐츠 관리 시스템**
+
+`React` `Spring Boot` `Spring Security` `JPA` `MySQL` `Docker` `Nginx`
 
 방문자는 사진과 연도별 상품을 탐색하고, 운영자는 관리자 화면에서 사진과 안내 콘텐츠를 직접 관리합니다. React 프론트엔드와 Spring Boot 백엔드를 **하나의 통합 저장소**에서 관리합니다.
 
@@ -125,9 +142,10 @@ flowchart TD
 
 <br />
 
-## 04 / Code Highlights
+<details>
+<summary><strong>핵심 구현 코드 펼쳐보기</strong></summary>
 
-구현 방식은 아래 코드에서 확인할 수 있습니다.
+SnapTheTitle의 구현 방식은 아래 코드에서 확인할 수 있습니다.
 
 | 관심 영역 | 코드 |
 | :--- | :--- |
@@ -137,12 +155,17 @@ flowchart TD
 | 사진 관리 및 드래그 정렬 | [GalleryManagement.jsx](https://github.com/junhyeok928/snapthetitle-app/blob/main/snapthetitle/src/components/admin/GalleryManagement.jsx) |
 | 컨테이너와 서비스 연결 | [docker-compose.yml](https://github.com/junhyeok928/snapthetitle-app/blob/main/docker-compose.yml) |
 
+</details>
+
+<!-- PROJECT END: snapthetitle -->
+<!-- 새 프로젝트는 이 위치에 독립된 소개 영역으로 추가하고, 상단 Portfolio 목록에도 링크를 추가합니다. -->
+
 ---
 
 <div align="center">
 
 **전준혁 · JUNHYEOK JEON**
 
-[GitHub](https://github.com/junhyeok928) &nbsp; / &nbsp; [Featured Project](https://github.com/junhyeok928/snapthetitle-app)
+[GitHub](https://github.com/junhyeok928) &nbsp; / &nbsp; [Portfolio](#portfolio)
 
 </div>
