@@ -29,7 +29,8 @@ React로 사용자 화면과 운영자를 위한 관리 도구를 만듭니다.
 ## 01 / About
 
 사용자 화면과 서버 로직, 데이터 저장과 배포 환경을 연결하는 웹 개발을 합니다.<br />
-프로젝트별로 해결한 문제와 구현 과정, 사용한 기술을 정리하고 있습니다.
+프로젝트별로 해결한 문제와 구현 과정, 사용한 기술을 정리하고 있습니다.<br />
+일상에서 발견한 불편을 요구사항으로 구체화하고, **Codex와 협업해 설계·구현·검증·배포까지 이어가는 AI 활용 경험**도 쌓고 있습니다.
 
 | Frontend | Backend | Infrastructure |
 | :--- | :--- | :--- |
@@ -78,6 +79,17 @@ Context API · Axios · Fetch API · dnd-kit · Recharts
 
 HTTPS · Let's Encrypt / Certbot · 정적 파일 캐시 · 공유 업로드 볼륨
 
+### Desktop & AI-assisted Development
+
+<p>
+<img src="https://img.shields.io/badge/Electron-20383D?style=flat-square&amp;logo=electron&amp;logoColor=9FEAF9" alt="Electron" />
+<img src="https://img.shields.io/badge/SQLite-20383D?style=flat-square&amp;logo=sqlite&amp;logoColor=FFFFFF" alt="SQLite" />
+<img src="https://img.shields.io/badge/C%23-20383D?style=flat-square" alt="C#" />
+<img src="https://img.shields.io/badge/OpenAI_Codex-20383D?style=flat-square" alt="OpenAI Codex" />
+</p>
+
+요구사항 구체화 · UI 시안 비교 · AI와 반복 개발 · 테스트와 오류 수정 · Windows 배포
+
 <br />
 
 <a id="portfolio"></a>
@@ -89,6 +101,7 @@ HTTPS · Let's Encrypt / Certbot · 정적 파일 캐시 · 공유 업로드 볼
 | 프로젝트 | 소개 | 개발 범위 |
 | :--- | :--- | :--- |
 | [**01 · SnapTheTitle**](#project-snapthetitle) | 웨딩 스냅 홈페이지 & 콘텐츠 관리 시스템 | Frontend · Backend · Infrastructure |
+| [**02 · QuadFinder**](#project-quadfinder) | 파일 검색과 다중 패널 탐색을 결합한 Windows 파일 관리자 | Desktop · UI/UX · AI-assisted Development |
 
 <br />
 
@@ -158,6 +171,62 @@ SnapTheTitle의 구현 방식은 아래 코드에서 확인할 수 있습니다.
 </details>
 
 <!-- PROJECT END: snapthetitle -->
+<br />
+
+
+<!-- PROJECT START: quadfinder -->
+<a id="project-quadfinder"></a>
+
+### Project 02 / QuadFinder
+
+<a href="https://github.com/junhyeok928/QuadFinder">
+<img src="https://raw.githubusercontent.com/junhyeok928/QuadFinder/main/docs/implementation-preview.png" width="100%" alt="QuadFinder — 뉴트럴 블랙 테마의 4분할 파일 탐색 화면" />
+</a>
+
+**매일 쓰던 두 도구의 불편함에서 출발한 Windows 파일 관리자**
+
+`Electron` `JavaScript` `SQLite` `C#` `WPF` `NSIS` `OpenAI Codex`
+
+평소 파일 검색에는 **Everything**, 여러 폴더를 나란히 탐색할 때는 **Q-Dir**을 사용했습니다. 두 프로그램을 오가야 하는 번거로움과 아쉬운 디자인을 개선하고 싶어, 검색과 다중 패널 탐색을 하나의 현대적인 작업 공간으로 묶는 QuadFinder를 **Codex와 협업해 제작**했습니다. Everything을 설치하거나 연동할 필요 없이 자체 로컬 인덱스로 동작합니다.
+
+| 해결한 문제 | 구현 내용 |
+| :--- | :--- |
+| **검색과 탐색의 분리** | 로컬 파일 이름 검색과 1·2·4분할 탐색, 패널별 독립 탭을 한 화면에 통합 |
+| **일상적인 조작의 불편** | 영역 드래그 선택, Windows 우클릭 메뉴, 즐겨찾기·최근 폴더, 마우스 뒤로 가기 |
+| **일관되지 않은 화면 구성** | 뉴트럴 블랙·실버 라이트 테마, 공통 팝업 스타일, 패널·탐색 영역 크기와 전체 배율 조절 |
+| **인덱싱 지연과 반복 작업** | SQLite 인덱스 저장과 변경 경로 갱신, 네트워크 폴더 제외, 진행 상태·접근 오류 안내 |
+| **실행부터 배포까지의 경험** | 첫 실행 사용 안내, 전용 설치 화면, 설치 EXE·포터블 ZIP 공개 베타 배포 |
+
+#### AI를 활용한 개발 방식
+
+**문제를 정의하고 결과를 검토하며, AI와 반복적으로 제품을 완성하는 과정에 집중했습니다.** Codex에 코드를 요청하는 데서 끝내지 않고, 실제 사용 중 발견한 문제를 다음 개선의 기준으로 삼았습니다.
+
+| 내가 주도한 판단 | Codex와 진행한 작업 |
+| :--- | :--- |
+| **무엇을 해결할지 정의** | 평소 작업 흐름을 바탕으로 검색·분할 탐색·파일 관리 요구사항 구체화 |
+| **디자인 선택과 피드백** | 시안을 비교하고 아이콘·글꼴·테마·팝업·설치 화면을 반복 개선 |
+| **실제 증상을 바탕으로 우선순위 설정** | 인덱싱 지연, 비활성 창 깜빡임, 탐색 버튼 동작과 CI 실패 원인 점검·수정 |
+| **완료 기준 설정** | 단위 테스트 69개, 실제 Electron 통합 검사, 설치·제거와 배포 파일 무결성 확인 후 공개 |
+
+요구사항과 사용성 피드백을 구체적으로 전달하고, 테스트와 배포 결과를 확인하면서 **AI를 개발 전 과정에 활용한 사례**입니다.
+
+[**프로젝트 README →**](https://github.com/junhyeok928/QuadFinder#readme) &nbsp; · &nbsp; [**베타 다운로드 ↗**](https://github.com/junhyeok928/QuadFinder/releases/tag/v0.14.0-beta.1) &nbsp; · &nbsp; [**Windows 검사 ↗**](https://github.com/junhyeok928/QuadFinder/actions/workflows/ci.yml)
+
+<details>
+<summary><strong>핵심 구현과 검증 코드 펼쳐보기</strong></summary>
+
+| 관심 영역 | 코드 |
+| :--- | :--- |
+| 로컬 검색 인덱싱과 변경 반영 | [index-engine.cjs](https://github.com/junhyeok928/QuadFinder/blob/main/src/index-engine.cjs) |
+| SQLite 인덱스 저장 | [index-store.cjs](https://github.com/junhyeok928/QuadFinder/blob/main/src/index-store.cjs) |
+| Windows 셸 연동 | [ShellBridge.cs](https://github.com/junhyeok928/QuadFinder/blob/main/native/ShellBridge.cs) |
+| 전용 설치 화면과 동작 | [SetupWindow.cs](https://github.com/junhyeok928/QuadFinder/blob/main/installer/SetupWindow.cs) |
+| 실제 앱 통합 검사 | [functional-smoke.cjs](https://github.com/junhyeok928/QuadFinder/blob/main/scripts/functional-smoke.cjs) |
+
+</details>
+
+<!-- PROJECT END: quadfinder -->
+
 <!-- 새 프로젝트는 이 위치에 독립된 소개 영역으로 추가하고, 상단 Portfolio 목록에도 링크를 추가합니다. -->
 
 ---
